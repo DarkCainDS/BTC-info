@@ -1,0 +1,15 @@
+ Que es Bitcoin Core?
+
+Repositorio que esta alojado en GitHub que contiene la implementación del protocolo de Bitcoin. - Open Source (Licencia MTI) - Software más usado por la comunidad. - Referencia para otras implementaciones (líder). - Bitcoin Core es el libro de las reglas de Bitcoin.
+- BIP
+
+Propuestas para cambios en Bitcoin. - Se publica en serie.
+Cada BIP tiene un líder para evangelizar y coordinar.
+BIPs existen para informar y orientar procesos en la comunidad.
+- Centralización Core Devs?
+
+Lideran el desfile. - Cualquier persona puede usar el software y agregar nuevas propuestas. - Sí un cambio no es bien recibido por la comunidad. - Los usuarios pueden hacer un fork sobre las reglas. - Empoderamiento.
+- Usos de Bitcoin Core
+
+Nodo validador en la red P2P. - Implementación de referencia de una billetera.
+Interfaz programatica (RCP via HTTP o Cli).

@@ -1,0 +1,15 @@
+4 tecnologías que componen el Bitcoin
+
+Proof of work(Pow)
+
+minero busca resolver los acertijos y asi se apoya a la red bitcont
+
+Criptografía.
+
+Cifran y esconder informacion para que el dueño solo tenga acceso.
+
+Blockchain. bloque de datos donde estan los datos de cada bitcoins.
+
+Bitcoin script.
+
+Lenguaje de programación de bitcoins,puede realizar trasacciones simples o complejas.

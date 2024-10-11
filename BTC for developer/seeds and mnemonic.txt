@@ -1,0 +1,14 @@
+Seeds and mnemonic codes.
+
+Deterministic Wallet.
+
+Todas las llaves se generan a partir de una llave maestra, conocida como seed.
+Las llaves están relacionadas unas con otras y pueden ser generadas nuevamente con el seed original.
+Mnemonic code words: representación de un número aleatorio a través de 12 o 24 palabras sencillas de escribir.
+. Códigos mnemónicos.
+
+Creación de un seed a partir de una secuencia de palabras en inglés.
+Facilidad para transcribir, exportar e importar.
+Tipo	Ejemplo
+Seed como hex	0C1E24E5917779D297E14D4SF14E1A1A
+Seed de un mnemónico de 12 palabras	army van defense carry jealous true garbage claim echo media make crunch

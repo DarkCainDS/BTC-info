@@ -1,0 +1,64 @@
+Bitcoin Core se encuentra alojado en un repositorio de GitHub como muchos otros proyectos OpenSource. El código fuente puede abrumar al principio, dado que es muy grande e incluye múltiples interfaces o herramientas para interactuar con la Blockchain de Bitcoin.
+
+Cuáles son las interfaces Bitcoin Core
+El repositorio de Bitcoin Core está compuesto por una serie de interfaces para interactuar con los datos de la Blockchain de diversas maneras, dependiendo el propósito y la necesidad como usuario final.
+
+Interfaz red P2P
+Bitcoin Core implementa un protocolo de mensajería P2P a través de TCP entre sus nodos para la comunicación y la sincronización de la información.
+
+Los nodos pueden sufrir problemas de seguridad y de denegación de servicios que provocan que no puedan validar transacciones y, por lo tanto, no puedan operar. Sin embargo, Bitcoin Core implementa propuestas en su protocolo para evitar los ataque DOS.
+
+Interfaz SPV
+Simplified Payment Verification (SPV) o Verificación de Pago Simplificada permite la verificación de una transacción o la obtención del balance de una wallet sin necesidad de descargar la ledger completa de la Blockchain de Bitcoin.
+
+La desventaja de SPV es su seguridad. No es posible la verificación de las transacciones con esta interfaz, ya que un tercero es quien hace entrega de la información y esta puede ser corrompida.
+
+SPV se trata de un cliente ligero, ideal para dispositivos móviles o tablets, cuyo almacenamiento es más limitado y en donde solo requerimos realizar pequeñas transacciones.
+
+Interfaz RPC/HTTP
+Una de las interfaces más importantes de Bitcoin Core es la que permite el desarrollo de cualquier tipo de aplicación. Permite consultar datos a través del protocolo RPC (Remote Procedure Call) sobre HTTP.
+
+El mismo funciona a través de un daemon (demonio) llamado Bitcoind. Un programa que corre en segundo plano y permite la ejecución de comandos utilizando el bitcoin-cli para la obtención de información y su posterior manipulación para construir aplicaciones como un explorador de Bitcoin.
+
+Su funcionamiento es similar a una API, aunque técnicamente diferente. Los mineros utilizan esta interfaz para obtener información y construir los bloques.
+
+Interfaz Qt
+Bitcoin-qt es una de las interfaces más antiguas del proyecto con algo más de 10 años de existencia. La misma consta de un front-end para interactuar con la Blockchain, visualizar estadísticas básicas, interactuar con la información por medio del bitcoin-cli y de RPC y las funciones básicas de una wallet.
+
+Esta interfaz está en desuso. Al tener RPC/HTTP, podemos verlo como un backend y construir aplicaciones web más sofisticadas y mejores funcionalidades.
+
+Interfaz ZMQ
+Las siglas MQ hacen referencia a servicios de mensajería y de entrega de notificaciones o push notificación. Este tipo de servicios se usan mucho en aplicaciones móviles para notificar con información sobre su cuenta.
+
+ZMQ o ZeroMQ es el servicio que utiliza Bitcoin Core para el envío de notificaciones a los clientes a través de sockets. Múltiples clientes pueden conectarse a un socket para ser notificados cuando se crea un nuevo bloque, una transacción u ocurre un determinado evento en la Blockchain para actuar en consecuencia.
+
+Esta interfaz es útil para desarrollar otro tipo de aplicaciones como Lightning Network que aprovecha esta característica para mantener su información actualizada con la red principal.
+
+Conclusión
+Has visto hasta aquí múltiples interfaces, gráficas, por CLI o que utilizan diversos protocolos de intercambio de información, que expone Bitcoin Core para interactuar con la Blockchain de Bitcoin o para la construcción de otras aplicaciones.
+
+
+Arquitectura de Bitcoin Core
+P2P
+Bitcoin forma una red TCP de mensajería
+src/protocol.h
+Cada nodo tiene pares/vecinos con los cuales puede intercambiar información.
+Protección DoS.
+SPV.
+RPC/HTTP
+Interacción programática de Bitcoin
+Consultas.
+Uso de billeteras externas.
+Menos contribuyentes bloqueados
+Mineros construyen bloques.
+Bitcoin-cli permite acceder a esta interfaz a travez de la linea de comandos.
+Qt
+Interfaz grafica que expone.
+Estadísticas básicas.
+Consola RPC
+Funcionalidades de billetera.
+ZMQ
+Publica notificaciones en un socket cuando recibe:
+Un nuevo bloque
+Una nueva transacción.
+Util para otros aplicativos para realizar acciones sobre estos eventos (Lightning Network)

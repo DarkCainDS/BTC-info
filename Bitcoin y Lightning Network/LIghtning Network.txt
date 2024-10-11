@@ -1,0 +1,1 @@
+Es un protocolo pensado para mejorar la escalabilidad del Bitcoin. Esto es posible gracias a que Lightning Network trabaja como una segunda capa sobre Bitcoin. Una que le permite a esta criptomoneda realizar cosas que normalmente no podría y más específicamente; transacciones instantáneas y con muy bajas comisiones

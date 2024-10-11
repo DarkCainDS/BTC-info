@@ -1,0 +1,3 @@
+Lightning Network es una red descentralizada para micropagos instantáneos y de alto volumen de transacciones que elimina el riesgo de delegar la custodia de fondos a terceros de confianza.
+
+Las redes blockchain actuales permiten a cualquier persona enviar valor sin requerir de un intermediario o depositario de confianza. Sin embargo, la transmisión y validación de estas transacciones es lenta y costosa debido a las limitaciones intrínsecas de estas redes. Por ejemplo, bitcoin, la criptomoneda más utilizada y valiosa del mundo, agrega transacciones a bloques espaciados cada diez minutos, aproximadamente. Los pagos son considerados como seguros después de la confirmación de seis bloques, un lapso de tiempo aproximado de una hora, dependiendo del estado de la red.

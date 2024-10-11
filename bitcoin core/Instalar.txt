@@ -1,0 +1,178 @@
+RESUMEN CLASE 9: COMO INSTALAR BITCOIN CORE: GUIA TEXTO
+
+INSTALANDO BITCOIN CORE EN WSL
+
+I.- ACTUALIZANDO
+
+
+$ sudo apt update 
+$ sudo apt upgrade
+II.- UTILIZANDO TOR
+
+
+
+$ sudo apt-get update && sudo apt install -y apt-transport-https
+
+# Edita las fuentes para instalar los paquetes
+
+$ sudo vi /etc/apt/sources.list.d/tor.list
+
+$ deb https://deb.torproject.org/torproject.org focal main
+
+$ deb-src https://deb.torproject.org/torproject.org focal main
+
+# Obtén la llave PGP para Tor y agregala a GPG
+
+$ sudo curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | sudo gpg --import
+
+$ sudo gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+
+# Instalando tor
+
+$ sudo apt update && sudo apt install -y tor deb.torproject.org-keyring
+
+# Agrega un usuario para tor con el usuario que estas "whoami = user"
+
+$ sudo usermod -a -G debian-tor user
+
+# Editar la configuración
+
+$ sudo vi /etc/tor/torrc
+
+# Añade esta líneas en el encabezado del archivo mesionado anteriormente:
+
+ControlPort 9051
+CookieAuthentication 1
+CookieAuthFileGroupReadable 1
+Log notice stdout
+SOCKSPort 9050
+Reinicia el servicio
+
+
+$ sudo service tor restart
+Revisar si el servicio está funcionando "debe mostrarte Congratulations"
+
+
+$ curl --socks5 localhost:9050 --socks5-hostname localhost:9050 -s https://check.torproject.org/ | cat | grep -m 1 Congratulations | xargs
+III.- INSTALANDO BITCOIN CORE
+
+Instalacion
+
+
+# Instala las dependencias necesarias para correr bitcoin core 
+# ccache no es requerida pero puede servirte. https://github.com/ccache/ccache
+# Si quieres conocer más https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md 
+$ sudo apt install git build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libminiupnpc-dev libzmq3-dev
+
+# Clona el código fuente de github, puedes hacerlo desde el repositorio de Bitcoin o través de un fork que generes
+$ git clone -b v22.0 https://github.com/bitcoin/bitcoin.git
+
+# Muévete al directorio
+$ cd bitcoin/
+
+# Corre este comando para poder usar BerkeleyDB (Base de datos para la billetera)
+$ ./contrib/install_db4.sh `pwd`
+
+# Ten en cuenta la salida del proceso anterior, el export te servirá más adelante
+
+# Ejecuta export BDB_PREFIX='<PATH-TO>/db4' antes de correr el script autogen.sh
+$ ./autogen.sh
+
+# En tu configure puedes usar cuantas banderas necesites
+# Para configurar tu complilación, por ejemplo CXXFLAGS u otras banderas como --with-zmq, --without-gui BDB libs es necesario para que puedas usar la billetera, recuerda que esto es solo un ejemplo, a nivel productivo no deberías usar la billetera.
+# Puedes ejecutar ./configure --help para encontrar todas las opciones posibles.
+$ ./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --with-zmq --without-gui 
+
+# make construye tu programa, usamos nproc para conocer cuantos núcleos tiene nuestro procesador.
+# -j especifica el número de tareas a correr de manera simultánea
+# Esto puede tomar un tiempo....
+$ make -j "$(($(nproc)+1))"
+
+# Puedes usar ccache para acelerar el proceso si reconstruyes múltiples veces, para más información https://github.com/bitcoin/bitcoin/blob/master/doc/productivity.md 
+
+# Make install permite usar bitcoind y bitcoin-cli en cualquier parte de nuestro sistema operativo
+$ sudo make install
+Pruebas Unitarias:
+
+
+$ make check
+IV.- CONFIGURACION CREANDO EL DIRECTORIO DE DATOS DONDE LOS ARCHIVOS DE BITCOIN SE ALMACENARAN
+
+
+$ mkdir -p /.bitcoin/data && mkdir ~/.bitcoin
+
+# Este script te entregará el string de autenticación para añadir al archivo bitcoin.conf "donde dice COMPLETAR AQUI"
+# Guarda la contraseña, te servirá para servicios que generes más adelante (Ejemplo, lightning)
+
+$ wget https://raw.githubusercontent.com/bitcoin/bitcoin/master/share/rpcauth/rpcauth.py
+python3 ./rpcauth.py bitcoinrpc
+V.- EDITAR EL ARCHIVO DE CONFIGURACION
+
+
+$ vi ~/.bitcoin/bitcoin.conf
+Añadir lo siguiente tal como se muestra:
+
+
+# Añade la mejor altura:
+# Si tienes otro nodo, utiliza getbestblockhash para agregar este valor, ejemplo: 00000000000000522f7f46b8c1ba3cee6287535b124ecbd00ac7cb911d5a573
+assumevalid=0
+
+# Correlo como daemon
+daemon=1
+
+# Elige en qué red vas a correr tu nodo, tambien puedes usar mainnet, regtest o signnet
+testnet=1 
+
+# Configura el directorio de datos
+datadir=/.bitcoin/data
+
+# Configura el numero de megabytes usados por RAM
+dbcache=3000
+
+# Añade visibilidad al mempool y llamados RPC para debug
+debug=mempool
+debug=rpc
+
+# Escucha a tus pares
+listen=1
+
+# Pon un límite al número de megabytes necesitados en el mempool
+maxmempool=100
+
+# Limita la carga a los pares 
+maxuploadtarget=1000
+
+# Apaga SPV nodes.
+nopeerbloomfilters=1
+peerbloomfilters=0
+
+# Configura la autenticación RPC con el valor que obtuviste al correr el script
+rpcauth="COMPLETAR AQUI"
+
+# Prende el servidor RPC
+server=1
+
+# Reduce el tamaño del archivos de logs al reiniciar el nodo
+shrinkdebuglog=1
+
+# Iniciar el índice de busqueda de transacciones
+txindex=1
+
+# Enciende la publicación ZMQ
+zmqpubrawblock=tcp://127.0.0.1:28332
+zmqpubrawtx=tcp://127.0.0.1:28333
+VI.- INICIAR
+
+
+$ sudo bitcoind
+NOTA:
+
+Si te aparece error por que no tienes permisos, cambiar la propiedad del directorio .bitcoin y su contenido al usuario actual "usuario" seguramente ese directorio es propiedad del usuario root.
+
+
+$ sudo chown usuario .bitcoin
+Crea un link para revisar el log de Bitcoin Core
+
+
+$ ln -s /blockchain/.bitcoin/data/testnet3/debug.log ~/bitcoind-testnet.log
+LISTO!!!

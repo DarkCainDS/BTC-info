@@ -1,0 +1,21 @@
+RESUMEN CLASE 10: CONOCE BITCOIN-CLI
+
+Conteo de blocks
+
+
+$ bitcoin-cli getblockcount
+Para conocer los comandos
+
+
+$ bitcoin-cli help
+Para enviar una cantidad de bitcoins
+
+
+$ bitcoin-cli help send
+Para listar billeteras
+
+
+$ bitcoin-cli help listwallets
+
+
+CLASE10 Imagen1_ConoceBitcoinCLI.png

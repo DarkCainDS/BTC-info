@@ -1,0 +1,28 @@
+Llaves públicas y privadas / Bitcoin addresses.
+
+. Llaves.
+
+La propiedad de bitcoin se establece a través de llaves, direcciones y firmas.
+Las llaves en una billetera son independientes del protocolo Bitcoin.
+Las billeteras solo contienen llaves.
+Las llaves vienen en pares: privada y pública.
+. Direcciones.
+
+La llave pública del destinatario es representada por una Bitcoin address.
+Los destinos pueden ser flexibles, por ejemplo: un script representado en una dirección.
+La dirección es parte de lo que se comparte al mundo.
+. Llaves públicas y privadas.
+
+Bitcoin usa el algoritmo de Curva Elíptica para criptografía.
+Llave pública: recibir fondos.
+Es calculada de la llave privada usando multiplicación de Curva Elíptica.
+Criptografía de curva elíptica.
+Estándar Secp256k1
+Una llave privada puede convertirse en una pública, pero no en la dirección opuesta.
+Llave privada: firmar transacciones para utilizar fondos.
+Número escogido al azar.
+Debe permanecer secreta.
+Se genera a partir de la llave pública.
+Es necesario que la generación del número sea realmente aleatoria.
+CSPRNG.
+Criptografía asimétrica.

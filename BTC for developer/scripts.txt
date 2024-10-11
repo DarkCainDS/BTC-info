@@ -1,0 +1,25 @@
+El funcionamiento de las transacciones en la Blockchain de Bitcoin tienen un motivo lógico, su propio lenguaje de programación llamado Bitcoin Script.
+
+¿Qué es Bitcoin Script?
+Bitcoin Script, se trata de un lenguaje de scripting que permite verificar si las condiciones para la utilización de las UTXO (salidas) están dadas y poder desbloquearlas.
+
+Toda actividad en la red de Bitcoin está determinada por el lenguaje de programación que Satoshi Nakamoto creó especialmente para su funcionamiento.
+
+Los Scripts que Bitcoin permite programar son “Turing Incompleto”, lo que significa que su funcionalidad es limitada, no admite condicionantes ni bucles lógicos. Solo permite la ejecución de un programa de forma secuencial, una instrucción después de la otra en basado en una pila o stack.
+
+Esto le da a Bitcoin una capa extra de seguridad. Al no permitir bucles infinitos, se evita por naturaleza los ataques de denegación de servicios.
+
+Evitando ataques de denegación de servicios
+Las Blockchains implementan diversos mecanismos para evitar este tipo de ataques. La Blockchain de Ethereum utiliza el concepto de Gas para limitar el procesamiento de la lógica de un programa y evitar operaciones infinitas.
+
+¿Cómo es un Script en Bitcoin?
+Los programas se escriben utilizando una serie de OP_CODES (Código de Operación) definidos en la arquitectura de Bitcoin. Cada código posee una funcionalidad definida, ya sea de criptografía, aritmética, flujo de información, manejo lógico, etc. Los scripts se definen y se ejecutan de izquierda a derecha.
+
+Un script para la transferencia de BTC entre dos cuentas luce de la siguiente manera:
+
+OP_DUP OP_HASH160 ef4a75e1e4572b8f810abe52cdd2e7cfd74b63e2 OP_EQUALVERIFY OP_CHECKSIG
+Dicho script, también denominado scriptPubKey o script de bloqueo, contiene las condiciones para consumir una salida. A su vez, la transacción contiene un campo scriptSig, o script de desbloqueo, con la firma y la clave pública para satisfacer las condiciones del gasto de esa salida.
+
+El proceso por detrás de los scripts de Bitcoin poseen una importante complejidad criptográfica para demostrar la propiedad de un UTXO, realizar validaciones de hashes y lograr transferir valor entre dos cuentas.
+
+Tal vez estés ansioso o ansiosa por saber más sobre cómo funciona Bitcoin técnicamente y escribir tus propios scripts. ¡Calma! Podrás continuar al finalizar este curso con el Curso de Bitcoin Core y Script donde se verá más en profundidad cómo hacerlo. Continuemos que aún hay mucho por aprender sobre el funcionamiento técnico de Bitcoin.

@@ -1,0 +1,20 @@
+BIP: Propuestas de mejoras de Bitcoin. Son ideas presentadas a la comunidad para perfeccionar y mejorar el funcionamiento de la red de BTC. Permite que los usuarios puedan sugerir cambios en el protocolo de BTC o en sus datos de manera ordenada. Estos cambios son presentados en documentos técnicos, así como sus motivaciones y su justificación. Fue propuesto por Amir Taaki el 19 de agosto de 2011.
+
+BIP de seguimiento de normas: Se usa para describir cambios que afecten a la mayoría, son documentos técnicos y extensamentes debatidos.
+BIP Informativo: Muestran problemas en el diseño de BTC y buscan dar recomendaciones para su solución, es debatido y expuesto a la comunidad.
+BIP de proceso: La propuesta de mejora está asociada a procedimientos, cambios de proceso de tomas de decisiones o incluso mejores del mismo que no supongan cambios en la estructuración de BTC.
+Estructuración y etapas
+Preámbulo con encabezados del contenido.
+Resumen con la descripción del problema.
+Se establecen los derechos de autor que existan.
+Especificación, sintaxis y semántica de la cualquier característica nueva que debe estar detallada y clara.
+Exponer las motivaciones, justificación y compatibilidad con BIP's anteriores.
+Etapas del BIP
+Borrador
+Diferido
+Propuesto
+Rechazado
+Retirado
+Final o activo
+Reemplazado
+Obsoleto

@@ -1,0 +1,43 @@
+La Arquitectura de una Red P2P. . Red homogénea que tiene unas máquinas que corren cierto protocolo. .
+
+Todos los participantes son pares entre sí, todos son iguales.
+Resiliente, descentralizada y abierta.
+Bitcoin, Napster, BitTorrent. . Red de Bitcoin. .
+Conjunto de nodos corriendo el protocolo bitcoin.
+Protocolos adicionales usan el P2P de bitcoin y extienden la red a otros nodos corriendo esos protocolos adicionales.
+Extended Bitcoin Network. . Tipos de nodos. .
+Full node.
+Nodo que valida la cadena completa y sus transacciones.
+Mantienen un estado actualizado, un conjunto de UTXO.
+Pruning nodes.
+Nodo que descarga y procesa bloques para generar una base de datos para validación.
+Desecha bloques antiguos para ahorrar espacio.
+Archive nodes.
+Contiene una copia de toda la historia de la cadena.
+Valida y consulta transacciones y bloques en cualquier punto histórico.
+Entregan el historial a nuevos nodos para que se conviertan en full nodes.
+Mining nodes.
+Compiten por crear nuevos bloques.
+Validan transacciones.
+Fundamentales para la seguridad y el consenso de la red.
+Mantienen un mempool de transacciones no confirmadas.
+Mining pools.
+Simplified payment verification (SPV).
+Operan sin almacenar la cadena completa.
+Descargan solo los encabezados de los bloques.
+Confían en otros nodos para validad bloques y transacciones.
+Profundidad vs Altura.
+Merkle Path.
+Otros conceptos.
+Descarga de bloque inicial (IBD): estado temporal donde cada vez que se añade o actualiza un nodo, debe descargar todos los bloques y los datos para ponerse al tanto de las transacciones y los bloques nuevos que se añaden al Libro Mayor.
+Bitcoin Core: implementación del protocolo Bitcoin a través de un proyecto open source iniciado por Satoshi Nakamoto.
+Nodo como servicio: es un nodo que permite que otros componentes puedan comunicarse con él para obtener información relevante como servidores, billeteras, etc. . La información en un nodo. . Full Node. | Estado | BD Bloques | Mempool | | --- | --- | --- | .
+Estado: lista de transacciones que no se han gastado.
+Base de datos de bloques: información actualizada que se tiene en el Libro Mayor.
+Mempool: campo de todas las transacciones que son candidatas a añadir próximamente en un nuevo bloque.
+Estructura que contiene los mejores candidatos (transacciones) para minar (agregar un nuevo bloque).
+Políticas: por ejemplo, transacción muy grande (más de 100 kb) o muy pequeña (menos de 82 bytes). . El estado actual es uno de los insumos para validar nuevas transacciones. . Con las transacciones que llegan en un nuevo bloque se actualiza el set de UTXO, borrando los que se gastaron y agregando los nuevos creados por las transacciones. . Network Discovery. .
+Localización geográfica no es relevante.
+Handshake version message.
+DNS Seeds.
+Sync.

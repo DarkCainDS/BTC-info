@@ -1,0 +1,12 @@
+Billeteras de Auto-Custodia
+También conocidas como billeteras no custodiales, auto-custodiales o self-custodiales.
+
+El usuario es el custodio de la clave privada.
+El usuario tiene control absoluto sobre sus activos.
+No se depende de intermediarios.
+El riesgo principal radica en la pérdida de las claves privadas, que conlleva la pérdida de los criptoactivos.
+Billeteras Custodiales
+La clave privada es resguardada por un tercero, como un banco o una empresa de billeteras.
+El tercero tiene control total sobre la clave privada.
+La gestión de los criptoactivos se lleva a cabo mediante contraseñas u otros métodos de autenticación, como SMS o Google Authenticator.
+El riesgo principal radica en la posibilidad de que el gobierno o la empresa custodia pueda confiscar o acceder a tus fondos.

@@ -1,0 +1,11 @@
+Las wallets son softwares con los que podemos interactuar a través de una app o dispositivo físico, en dónde puedes tener acceso a tus Bitcoin. Existen dos tipos:
+
+Hot Wallet: Billetera digital, dispositivo de softwares cuyas llaves están en computador.
+Ventajas: Puedes transferir facilmente, son gratuitas y la mayoría son apps móviles.
+
+Desventajas: Estás más expuesto a vulneraciones.
+
+Cold Wallet: Son billeteras de criptomonedas que te permite administrar múltiples direcciones cuyas llaves están en un dispositivo especial sin acceso a internet.
+Ventajas: Permiten generar direcciones de criptomonedas y firmar las transacciones. Publica la transacción una vez que está firmada. Reduce la probabilidad de hackeo.
+
+Desventaja: Requiere interacción humana con el dispositivo que firma

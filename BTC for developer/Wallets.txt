@@ -1,0 +1,23 @@
+Las llaves públicas y privadas se crean y se almacenan en billeteras o wallets para su posterior utilización en transacciones. Existen diferentes tipos billeteras, con mayor o menos nivel de seguridad o diversos propósitos.
+
+¿Qué es una wallet?
+Las billeteras son el medio que utilizamos para generar nuevas llaves públicas y privadas, firmar transacciones a través de la privada y enviar dinero o recibirlo mediante la llave pública.
+
+Pueden ser software como plugins del navegador o aplicaciones mobile o también existen wallets que son hardware, similares a un pendrive.
+
+Las billeteras realmente no almacenan criptomonedas. El nombre más apropiado para una billetera debería ser “llavero”. Las billeteras guardan las llaves tanto públicas como privadas que permiten demostrar propiedad sobre los bitcoins y gastarlos.
+
+Tipos de billeteras o wallets
+Hablando de hardware o software, podremos encontrar varios tipos de billeteras como las frías o calientes dependiendo si la misma se encuentra conectada a internet o no.
+
+En esta oportunidad, vamos a hacer hincapié en otro tipo de clasificación de billeteras, entre wallets determinísticas y no determinísticas.
+
+Deterministic wallet:
+Las billeteras determinísticas son las más comunes y tal vez las que ya conozcas. Generan llaves a partir de una llave maestra. Un conjunto de 12, 18 o 24 palabras que debes guardar minuciosamente para recuperar tus llaves. Una billetera de este tipo puede contener N cantidad de llaves y todas se recuperan con la misma llave maestra.
+
+Nondeterministic wallet:
+Las billeteras no determinísticas generan llaves a partir de un número totalmente aleatorio. Este tipo de billeteras se utilizan poco y son más difíciles de mantener para un usuario debido a que las llaves no se relacionan entre sí. Debemos hacer un backup de cada llave de forma independiente.
+
+Metamask es una de las billeteras determinísticas pioneras en el mundo que seguro conoces. Hoy en día, son la mejor opción para comenzar a dar tus primeros pasos y tener una billetera para, al menos, comenzar a jugar con redes de prueba y aprender su funcionamiento.
+
+Ten en cuenta la seguridad que implica tener una o más wallets, o una o más llaves privadas que resguardar. Hay que educarse al respecto para comprender cómo mantener segura nuestra información.

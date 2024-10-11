@@ -1,0 +1,28 @@
+RESUMEN CLASE 12: TRANSACCIONES USANDO BIYCOIN-CLI
+
+Creamos una nueva wallet
+
+
+$ bitcoin-cli createwallet ""
+Verificamos que se creo la billetera
+
+
+$ ls /.bitcoin/data/testnet3/wallets/
+Creamos nuestra direccion
+
+
+$ bitcoin-cli getnewaddress -addresstype legacy
+Algunos faucets destacados para obtener bitcoins
+
+https://bitcoinfaucet.uo1.net/
+
+https://testnet-faucet.mempool.co/
+
+Verificamos nuestro balance
+
+
+$ bitcoin-cli getunconfirmedbalance
+Para conocer el balance de las transacciones iniciadas
+
+
+$ bitcoin-cli getbalance

@@ -1,0 +1,82 @@
+Una red peer-to-peer (P2P) es una arquitectura de red en la que cada nodo (o "peer") tiene capacidades y responsabilidades equivalentes. En lugar de depender de un servidor centralizado, cada nodo puede actuar como cliente y servidor, compartiendo recursos de forma directa con otros nodos. A continuación se describe la arquitectura de una red P2P y sus componentes principales:
+
+Componentes de una Red P2P
+Nodos (Peers):
+
+Nodos Ordinarios: Participan en la red proporcionando y consumiendo recursos.
+Nodos Superiores (Super Peers): Algunos nodos pueden tener roles especiales, como coordinadores o nodos con mayor capacidad de procesamiento y almacenamiento.
+Protocolo de Comunicación:
+
+Define cómo los nodos descubren otros nodos, cómo se comunican entre sí y cómo intercambian recursos.
+Tabla de Enrutamiento:
+
+Cada nodo mantiene una tabla que contiene información sobre otros nodos en la red, facilitando el enrutamiento de solicitudes y recursos.
+Tipos de Arquitectura P2P
+Red P2P Descentralizada:
+
+Todos los nodos son iguales y se comunican directamente entre sí.
+No hay un servidor central que coordine las actividades.
+Ejemplos: Gnutella, Freenet.
+Red P2P Centralizada:
+
+Hay un servidor central que ayuda en la coordinación, pero la transferencia de recursos se realiza directamente entre los nodos.
+El servidor central puede facilitar el descubrimiento de nodos y el enrutamiento inicial.
+Ejemplo: Napster (en su forma original).
+Red P2P Híbrida:
+
+Combina características de redes centralizadas y descentralizadas.
+Utiliza super peers para mejorar la eficiencia del descubrimiento y enrutamiento.
+Ejemplo: Kazaa, BitTorrent (usando trackers).
+Funcionamiento de una Red P2P
+Descubrimiento de Nodos:
+
+Los nodos deben encontrar otros nodos para conectarse y formar la red.
+Métodos comunes incluyen el uso de servidores de bootstrap, listas de nodos conocidos, y difusión de solicitudes de descubrimiento.
+Comunicación y Enrutamiento:
+
+Los nodos se comunican mediante protocolos específicos que facilitan la búsqueda y el intercambio de recursos.
+El enrutamiento puede ser directo o a través de múltiples nodos intermediarios.
+Intercambio de Recursos:
+
+Los nodos comparten recursos como archivos, ancho de banda y potencia de procesamiento.
+Los métodos de intercambio incluyen la descarga directa y el uso de técnicas como el particionado de archivos en trozos más pequeños.
+Mantenimiento de la Red:
+
+La red P2P necesita mecanismos para manejar la conectividad dinámica, ya que los nodos pueden unirse y abandonar la red en cualquier momento.
+Esto incluye la actualización de tablas de enrutamiento y la redistribución de recursos.
+Ejemplo: BitTorrent
+BitTorrent es un ejemplo bien conocido de una red P2P que utiliza una arquitectura híbrida:
+
+Trackers:
+
+Actúan como servidores centralizados que ayudan en el descubrimiento inicial de nodos.
+Mantienen una lista de nodos que tienen partes de un archivo específico.
+Swarm:
+
+El conjunto de nodos que están descargando y compartiendo el mismo archivo.
+Los nodos en un swarm se comunican directamente entre sí para intercambiar partes del archivo.
+Protocolo de Intercambio:
+
+Los archivos se dividen en piezas más pequeñas, y los nodos intercambian estas piezas entre sí.
+Se utilizan técnicas como el intercambio raro (rarest first) para maximizar la eficiencia del intercambio.
+Beneficios de una Red P2P
+Descentralización:
+
+No hay un punto único de falla, lo que aumenta la robustez y la disponibilidad de la red.
+Escalabilidad:
+
+La capacidad de la red puede aumentar fácilmente a medida que se agregan más nodos.
+Costo Eficiente:
+
+Los recursos se distribuyen entre los nodos participantes, reduciendo la necesidad de infraestructura centralizada costosa.
+Desafíos de una Red P2P
+Seguridad:
+
+Las redes P2P pueden ser susceptibles a ataques como la suplantación de identidad (spoofing), el envenenamiento de archivos (poisoning) y la distribución de malware.
+Gestión de Recursos:
+
+Equilibrar la carga y asegurar una distribución justa de los recursos puede ser complejo.
+Conectividad Dinámica:
+
+La naturaleza dinámica de las conexiones de los nodos puede complicar el mantenimiento de la red y la consistencia de los datos.
+En resumen, la arquitectura de una red P2P permite una distribución eficiente y robusta de recursos, adecuada para aplicaciones donde la descentralización y la escalabilidad son cruciales. Sin embargo, también introduce desafíos que deben ser manejados para asegurar un funcionamiento seguro y eficiente.

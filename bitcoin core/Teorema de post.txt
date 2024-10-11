@@ -1,0 +1,28 @@
+Bitcoin está soportado por múltiples conceptos, tecnologías o teoremas que fueron creados décadas antes. Satoshi Nakamoto unió las piezas para desarrollar esta gran Blockchain que hoy conocemos.
+
+El “Teorema de Post” es una de esos conceptos que construyen a Bitcoin y está relacionado con el procesamiento aritmético y lógico que ocurre dentro de la red.
+
+Turing completo vs. Turing incompleto
+El concepto de Turing completo e incompleto fue creado por Alan Turing para referirse a máquinas capaces de realizar cualquier tipo de cálculo de forma ilimitada, si el hardware lo permite.
+
+Dentro de los lenguajes de programación, utilizamos esta terminología para referirnos a lenguajes capaces de resolver cualquier tipo de problema computacional e implementar estructuras complejas como los condicionantes o ciclos for.
+
+Los lenguajes Turing incompletos, como Bitcoin Script, no permiten bucles de iteración. Esto limita su funcionamiento lógico, pero se gana en seguridad para la Blockchain.
+
+Imagina que un atacante malicioso logra ejecutar un bucle infinito dentro de la Blockchain, la misma caería en un ataque de denegación de servicios.
+
+Otras Blockchains, como la de Ethereum, utilizan el lenguaje de programación Solidity. El mismo es Turing completo, podemos desarrollar cualquier tipo de lógica aritmética. La forma de evitar los bucles infinitos se realiza por medio del pago de gas a la red para ejecutar un programa.
+
+Verificación vs. Computación
+La más importante diferencia entre la Blockchain de Bitcoin y la de Ethereum es el cómo procesan y validan una transacción dentro de la red.
+
+Si corres un contrato inteligente en la Blockchain de Ethereum, este contrato lo tienen que ejecutar todos los participantes, haciendo un proceso de computación mucho más amplio y que todos tienen que tener esa capacidad de hacerlo.
+
+En cambio, la Blockchain de Bitcoin hace algo diferente: añade un “Testigo”. El nodo que corre el programa, obtiene un resultado y entrega cierta información para verificar la misma. Esta información es verificada por nodos validadores; los cuales verifican que la información sea válida. Es decir, el proceso de computación y de ejecución del contrato no se tiene que hacer en todos los nodos.
+
+Esta es la gran diferencia entre la Ethereum Virtual Machine y el funcionamiento del protocolo de Bitcoin.
+
+Conclusión
+Comprender el funcionamiento de otras Blockchains como la de Ethereum o Solana te permitirá entender mejor cómo funciona la de Bitcoin, además de comprender cómo han ido evolucionando las distintas Blockchains en los últimos años. Ventajas y desventajas de cada una y cómo han tratado de superarse unas a otras.
+
+Es muy recomendable que dediques distintas etapas de estudio a cada Blockchain para ganar en conocimiento sobre cada ecosistema. Más allá del interés que puedas tener en Bitcoin o Ethereum, particularmente y así convertirte en todo un profesional del mundo Blockchain y Web3.

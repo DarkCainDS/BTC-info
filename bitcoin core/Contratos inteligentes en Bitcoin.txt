@@ -1,0 +1,43 @@
+El término “Contrato Inteligente” es ampliamente utilizado en el mundo Blockchain para referirnos a programas informáticos que corren dentro de las mismas.
+
+¿Qué es un contrato?
+Un contrato, en la vida real, es un documento donde dos partes o más acuerdan voluntariamente un pacto donde cada una debe cumplir con sus responsabilidades, con el fin de obtener un beneficio. El acuerdo queda escrito ante una autoridad central para que este sea respetado e intervenir en caso de un incumplimiento.
+
+Los contratos también pueden ser “de palabra” o relaciones entre dos personas. Si hay confianza entre las partes, sin necesidad de un intermediario que haga cumplir los objetivos.
+
+¿Qué es un contrato inteligente?
+Un Smart Contract o contrato inteligente, es un software donde, a través de código fuente, se redacta un acuerdo que los usuarios deben cumplir. Esta tecnología hace de intermediario para evitar inconvenientes entre las partes.
+
+Si tienes conocimiento sobre la Blockchain de Ethereum, sabrás que la misma fue la que popularizó el concepto de Contrato Inteligente que pueden ser escritos en el lenguaje de programación Solidity.
+
+Otras Blockchains posteriores como la de Solana también implementa contratos que puedes desarrollarse en Rust.
+
+La Blockchain de Bitcoin es mucho más limitada en este sentido. Su lenguaje, Bitcoin Script, es Turing incompleto y permite crear programas más modestos, pero sin dejar de ser una herramienta poderosa de programación.
+
+El término Smart Contract no fue creado ni por Satoshi Nakamoto, ni por Vitalik Buterin (Co-founder de Ethereum). El mismo fue acuñado en los años '90 por un jurista/informático llamado Nick Szabo. Los creadores de Ethereum unieron este concepto con las características de una Blockchain para crear lo que hoy conocemos como una de las Blockchains más importantes del mundo para desplegar contratos inteligentes.
+
+En simples palabras, el objetivo de un contrato inteligente es ser esa autoridad central o intermediario entre usuarios y evitar esa centralización de una responsabilidad tan importante en una empresa o en un tercero.
+
+Características de un contrato inteligente
+Un contrato inteligente no es un contrato ni tampoco inteligente. Son bloques de código fuente que no harán nada para lo que no esté programado. Aunque el nombre de Smart Contracts les quede a la perfección, pues su propósito es ser más eficientes que los contratos normales.
+
+Para que el contrato inteligente tenga validez, debe cumplir con algunas características:
+
+Observabilidad:
+Cada participante del contrato debe poder visualizar cómo se está desempeñando los otros participantes en su parte del acuerdo.
+
+Verificabilidad:
+Poder verificar que ese contrato se está llevando a cabo y cumpliendo correctamente.
+
+Privacidad:
+Es muy importante que los participantes no revelen la información del contrato. Sin embargo, lo pueden hacer si el contrato lo amerita.
+
+Exigibilidad:
+No depender de un tercero o un “juez” para que el contrato se cumpla.
+
+Conclusión
+A lo largo de los años, el ser humano ha creado diversas formas de establecer contratos entre partes y hacer cumplir estos o castigar a quién no lo haga. Por lo general, debe haber un intermediario para el cumplimiento de estos acuerdos como un escribano o una empresa.
+
+Los contratos inteligentes son la forma digital de implementar acuerdos o pautas a cumplir entre usuarios y sin depender de un tercero que administre y lo haga cumplir. Además de acelerar el cumplimiento del contrato para la comunicación o la entrega de valor.
+
+La gran innovación del mundo Blockchain es la capacidad de desarrollar este nuevo tipo de software que haga cumplir acuerdos donde muchas veces intervienen grandes sumas de dinero.
